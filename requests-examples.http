@@ -1,0 +1,55 @@
+# примеры API-запросов
+
+@baseUrl = http://localhost:8080
+
+@email = hello@mail.ru
+@password = password
+
+###
+# создать пользователя
+POST {{baseUrl}}/user
+Content-Type: application/json
+
+{
+  "email": "hello@mail.ru",
+  "password": "password"
+}
+
+###
+# получить пользователя
+GET {{baseUrl}}/user/3
+Content-Type: application/json
+### 
+
+###
+# получить пост
+GET {{baseUrl}}/post/2
+Content-Type: application/json
+
+###
+# создать пост
+POST {{baseUrl}}/post
+Content-Type: application/json
+
+{
+  "title": "IKEA sofa",
+  "text": "Bargaining allowed2"
+}
+
+###
+# изменить пост
+PUT {{baseUrl}}/post/6
+Content-Type: application/json
+
+{
+  "text": "Bargaining allowed2"
+}
+
+###
+# удалить пост
+DELETE {{baseUrl}}/post/6
+Content-Type: application/json
+
+
+
+
